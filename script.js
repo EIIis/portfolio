@@ -25,7 +25,7 @@ const experiences = [
   },
   {
     company: "Amazon Lab126",
-    role: "Software QA Engineer Intern",
+    role: "Software Quality Assurance Engineer Intern",
     date: "May 2022 – August 2022",
     location: "Sunnyvale, CA",
     description:
@@ -67,7 +67,7 @@ const projects = [
   {
     name: "Portfolio Website",
     image: "https://via.placeholder.com/300x200",
-    link: "https://github.com/EIIis/personal-site",
+    link: "https://github.com/EIIis/portfolio",
     date: "June 2025",
     description:
       "A personal portfolio site built using HTML, CSS, and JavaScript to showcase my work and experience.",
