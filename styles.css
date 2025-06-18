@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header styles */
+.site-header {
+  display: flex;
+  justify-content: flex-end; /* nav moves to the right */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation styles */
+.site-nav ul {
+  display: flex; /* horizontal layout */
+  list-style: none; /* remove bullets */
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem; /* space between list items */
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #007acc;
+}
+
+/* Optional section padding */
+main section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.hero {
+  display: flex; /* Enables flex layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Take full viewport height */
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffff; /* Optional: white background for contrast */
+}
+
+/* Heading (h1) styles */
+.hero h1 {
+  font-size: 2.5rem; /* Large, bold title */
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* Subtext (p) styles */
+.hero p {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 600px; /* Keeps it readable on big screens */
+}
+
+.about {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+.projects {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.card .date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card .description {
+  color: #444;
+  font-size: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #005f99;
+}
+
+.experience {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.experience h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+}
+
+.experience-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.experience-role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.experience-date,
+.experience-location {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0.25rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
