@@ -6,18 +6,18 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #181a1b; /* Dark background */
+  color: #eaeaea; /* Light text */
 }
 
 /* Header styles */
 .site-header {
   display: flex;
-  justify-content: flex-end; /* nav moves to the right */
+  justify-content: flex-end;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
+  background-color: #23272a; /* Darker header */
+  border-bottom: 1px solid #333;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,22 +25,22 @@ body {
 
 /* Navigation styles */
 .site-nav ul {
-  display: flex; /* horizontal layout */
-  list-style: none; /* remove bullets */
+  display: flex;
+  list-style: none;
   padding: 0;
   margin: 0;
-  gap: 1.5rem; /* space between list items */
+  gap: 1.5rem;
 }
 
 .site-nav a {
   text-decoration: none;
-  color: #333;
+  color: #eaeaea;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .site-nav a:hover {
-  color: #007acc;
+  color: #4fc3f7; /* Lighter blue accent */
 }
 
 /* Optional section padding */
@@ -50,62 +50,62 @@ main section {
 }
 
 .hero {
-  display: flex; /* Enables flex layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 100vh; /* Take full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 2rem;
   text-align: center;
-  background-color: #ffffff; /* Optional: white background for contrast */
+  background-color: #23272a; /* Dark hero background */
 }
 
-/* Heading (h1) styles */
 .hero h1 {
-  font-size: 2.5rem; /* Large, bold title */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: #fff;
 }
 
-/* Subtext (p) styles */
 .hero p {
   font-size: 1.25rem;
-  color: #555;
-  max-width: 600px; /* Keeps it readable on big screens */
+  color: #b0b0b0;
+  max-width: 600px;
 }
 
 .about {
   padding: 4rem 2rem;
   max-width: 800px;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: #23272a;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  min-height: auto;
 }
 
 .about h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #111;
+  color: #fff;
   text-align: center;
 }
 
 .about p {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #444;
+  color: #cccccc;
   margin-bottom: 1.25rem;
   text-align: justify;
 }
 
 .projects {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: #181a1b;
 }
 
 .projects h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .card-container {
@@ -117,9 +117,9 @@ main section {
 }
 
 .card {
-  background-color: #f5f5f5;
+  background-color: #23272a;
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
@@ -138,36 +138,37 @@ main section {
 
 .card .date {
   font-size: 0.9rem;
-  color: #666;
+  color: #888;
   margin-bottom: 0.5rem;
 }
 
 .card .description {
-  color: #444;
+  color: #cccccc;
   font-size: 1rem;
 }
 
 .project-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #007acc;
+  color: #4fc3f7;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: #005f99;
+  color: #82eefd;
 }
 
 .experience {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #23272a;
 }
 
 .experience h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .experience-container {
@@ -179,9 +180,9 @@ main section {
 }
 
 .experience-card {
-  background-color: #ffffff;
+  background-color: #181a1b;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   padding: 1.5rem;
   transition: transform 0.3s ease;
 }
@@ -193,25 +194,65 @@ main section {
 .experience-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #111;
+  color: #fff;
 }
 
 .experience-role {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #444;
+  color: #cccccc;
   margin-bottom: 0.25rem;
 }
 
 .experience-date,
 .experience-location {
   font-size: 0.95rem;
-  color: #777;
+  color: #888;
   margin-bottom: 0.25rem;
 }
 
 .experience-description {
   font-size: 1rem;
-  color: #444;
+  color: #cccccc;
   margin-top: 0.5rem;
+}
+
+.social {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #23272a;
+  min-height: auto;
+}
+
+.social h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: none;
+}
+
+footer {
+  background-color: #181a1b;
+  color: #cccccc;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.925rem;
 }

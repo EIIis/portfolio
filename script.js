@@ -71,6 +71,7 @@ const projects = [
     date: "June 2025",
     description:
       "A personal portfolio site built using HTML, CSS, and JavaScript to showcase my work and experience.",
+    technologies: "HTML, CSS, JavaScript",
   },
   {
     name: "LingoMate",
@@ -79,6 +80,7 @@ const projects = [
     date: "June 2025",
     description:
       "A real-time web-game application using WebSockets for instant between users.",
+    technologies: "Node.js, Express, Socket.IO, React",
   },
   {
     name: "Weather Dashboard",
@@ -87,6 +89,7 @@ const projects = [
     date: "June 2025",
     description:
       "A web application that fetches weather data from an API and displays current conditions and forecasts.",
+    technologies: "JavaScript, HTML, CSS, OpenWeatherMap API",
   },
   {
     name: "Blog Platform",
@@ -95,6 +98,7 @@ const projects = [
     date: "June 2024",
     description:
       "Simple blogging platform built with Node.js and Express. Implemented user authentication and CRUD operations for posts.",
+    technologies: "Node.js, Express, MongoDB",
   },
   {
     name: "RuneLite Plugin Development",
@@ -103,6 +107,7 @@ const projects = [
     date: "August 2024",
     description:
       "Programmed custom RuneLite plugins in Java to automate in-game tasks in Old School RuneScape. This involved interfacing with the RuneLite API, event-driven programming, and applying reverse engineering techniques to optimize performance and usability.",
+    technologies: "Java, RuneLite API",
   },
   {
     name: "AutoHotKey Script Development",
@@ -111,6 +116,7 @@ const projects = [
     date: "Feb 2024",
     description:
       "Developed AHK scripts to automate tasks in Old School RuneScape, demonstrating proficiency in scripting and process automation. Built and deployed a personal website using React, hosted via GitHub Pages, to showcase projects and technical skills.",
+    technologies: "AHK, React, GitHub Pages",
   },
 ];
 
@@ -121,6 +127,7 @@ function createProjectCard(project) {
       <img src="${project.image}" alt="${project.name} screenshot" />
       <p class="date">${project.date}</p>
       <p class="description">${project.description}</p>
+      <p class="date">${project.technologies}</p>
       ${
         project.link
           ? `<a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">View Project</a>`
