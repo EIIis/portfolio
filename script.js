@@ -1,3 +1,35 @@
+// ----- Card Creators -----
+
+function createExperienceCard({ company, role, date, location, description }) {
+  return `
+    <div class="experience-card">
+      <h3>${company}</h3>
+      <p class="experience-role">${role}</p>
+      <p class="experience-date">${date}</p>
+      <p class="experience-location">${location}</p>
+      <p class="experience-description">${description}</p>
+    </div>
+  `;
+}
+
+function createProjectCard({ name, image, link, description, technologies }) {
+  return `
+    <div class="card">
+      <h3>${name}</h3>
+      <img src="${image}" alt="${name} screenshot" />
+      <p class="description">${description}</p>
+      <p class="technologies">${technologies}</p>
+      ${
+        link
+          ? `<a class="project-link" href="${link}" target="_blank" rel="noopener noreferrer">View Project</a>`
+          : ""
+      }
+    </div>
+  `;
+}
+
+// ----- Data -----
+
 const experiences = [
   {
     company: "Workday",
@@ -35,106 +67,68 @@ const experiences = [
     company: "HiveRnD",
     role: "Software Engineer Intern",
     date: "May 2021 – July 2021",
-    location: "Birmingham, AL",
+    location: "Remote",
     description:
       "Working here I focused on developing the frontend of the website. Utilized a lot of JavaScript and React here in order to build out a responsive, dynamic website. Mostly built out webpages, such as the information page, login page, and a few others, as well as fixing the occasional UI bug",
   },
 ];
 
-function createExperienceCard(experience) {
-  return `
-    <div class="experience-card">
-      <h3>${experience.company}</h3>
-      <p class="experience-role">${experience.role}</p>
-      <p class="experience-date">${experience.date}</p>
-      <p class="experience-location">${experience.location}</p>
-      <p class="experience-description">${experience.description}</p>
-    </div>
-  `;
-}
-
-function renderExperiences() {
-  const container = document.getElementById("experience-cards");
-  container.innerHTML = experiences.map(createExperienceCard).join("");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderProjects();
-  renderExperiences();
-});
-
 const projects = [
   {
     name: "Portfolio Website",
-    image: "https://via.placeholder.com/300x200",
+    image: "assets/brands/github.svg",
     link: "https://github.com/EIIis/portfolio",
-    date: "June 2025",
     description:
-      "A personal portfolio site built using HTML, CSS, and JavaScript to showcase my work and experience.",
-    technologies: "HTML, CSS, JavaScript",
+      "Developed and deployed a personal portfolio website utilizing vanilla JavaScript, HTML, and CSS to showcase technical exerpiences and projects. Hosted via GitHub Pages with automated deployement, while using Git for version control",
+    technologies: "HTML, CSS, JavaScript, GitHub Pages",
   },
   {
     name: "LingoMate",
-    image: "https://via.placeholder.com/300x200",
+    image: "assets/brands/github.svg",
     link: "https://github.com/EIIis/LingoMate",
-    date: "June 2025",
     description:
-      "A real-time web-game application using WebSockets for instant between users.",
-    technologies: "Node.js, Express, Socket.IO, React",
+      "A real-time web-based multiplayer game app using WebSockets for instant between users. Utilizing Firebase for user authentication and data storage, the app allows users to create and join games, enhancing social interaction through a shared gaming experience.",
+    technologies: "React.js, Express, Socket.IO, Firebase",
   },
   {
-    name: "Weather Dashboard",
-    image: "https://via.placeholder.com/300x200",
-    link: "https://github.com/EIIis/",
-    date: "June 2025",
+    name: "LeetCode Extension",
+    image: "assets/brands/github.svg",
+    link: "https://github.com/EIIis/leetcode-extension",
     description:
-      "A web application that fetches weather data from an API and displays current conditions and forecasts.",
-    technologies: "JavaScript, HTML, CSS, OpenWeatherMap API",
+      "Developed a Chrome extension that detects accepted LeetCode submissions and extracts metadata using content scripts and DOM parsing",
+    technologies: "JavaScript, HTML, CSS, Chrome Extension API",
   },
   {
-    name: "Blog Platform",
-    image: "https://via.placeholder.com/300x200",
-    link: "https://github.com/EIIis/",
-    date: "June 2024",
+    name: "ootd",
+    image: "assets/brands/github.svg",
+    link: "https://github.com/EIIis/ootd",
     description:
-      "Simple blogging platform built with Node.js and Express. Implemented user authentication and CRUD operations for posts.",
-    technologies: "Node.js, Express, MongoDB",
+      "Fullstack web-app landing page, utlizing React with MaterialUI library for styling. Custom built email form with Express backend and MongoDB to handle and store user submissions.",
+    technologies: "React.js, MaterialUI, Express, MongoDB, Postman",
   },
   {
     name: "RuneLite Plugin Development",
-    image: "https://via.placeholder.com/300x200",
+    image: "assets/brands/github.svg",
     link: "https://github.com/EIIis/afk",
-    date: "August 2024",
     description:
-      "Programmed custom RuneLite plugins in Java to automate in-game tasks in Old School RuneScape. This involved interfacing with the RuneLite API, event-driven programming, and applying reverse engineering techniques to optimize performance and usability.",
+      "Programmed custom RuneLite plugins in Java to increase player QOL in Old School RuneScape. This involved interfacing with the RuneLite API, event-driven programming, and applying reverse engineering techniques to optimize performance and usability.",
     technologies: "Java, RuneLite API",
   },
   {
     name: "AutoHotKey Script Development",
-    image: "https://via.placeholder.com/300x200",
+    image: "assets/brands/github.svg",
     link: "https://eiiis.github.io/ahk/",
-    date: "Feb 2024",
     description:
       "Developed AHK scripts to automate tasks in Old School RuneScape, demonstrating proficiency in scripting and process automation. Built and deployed a personal website using React, hosted via GitHub Pages, to showcase projects and technical skills.",
-    technologies: "AHK, React, GitHub Pages",
+    technologies: "AutoHotKey, React, GitHub Pages",
   },
 ];
 
-function createProjectCard(project) {
-  return `
-    <div class="card">
-      <h3>${project.name}</h3>
-      <img src="${project.image}" alt="${project.name} screenshot" />
-      <p class="date">${project.date}</p>
-      <p class="description">${project.description}</p>
-      <p class="date">${project.technologies}</p>
-      ${
-        project.link
-          ? `<a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">View Project</a>`
-          : ""
-      }
-    </div>
-  `;
+// ----- Render Functions -----
+
+function renderExperiences() {
+  const container = document.getElementById("experience-cards");
+  container.innerHTML = experiences.map(createExperienceCard).join("");
 }
 
 function renderProjects() {
@@ -142,4 +136,47 @@ function renderProjects() {
   container.innerHTML = projects.map(createProjectCard).join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderProjects);
+// ----- DOMContentLoaded -----
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  renderExperiences();
+
+  // ----- Hamburger Menu Logic -----
+
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+  const navOverlay = document.querySelector(".nav-overlay");
+
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+
+    // Lock scroll when menu is open
+    document.body.style.overflow = navMenu.classList.contains("active")
+      ? "hidden"
+      : "";
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    navOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+  navOverlay.addEventListener("click", closeMenu);
+
+  const navLinks = document.querySelectorAll(".nav-menu a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 480) {
+      closeMenu();
+    }
+  });
+});

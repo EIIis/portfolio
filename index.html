@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ellis 🤠</title>
+    <link rel="icon" href="assets/EA.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <ul>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Technical Experience</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -20,22 +26,23 @@
               download="Ellis_Alcantara2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              >Resume</a
             >
+              Resume
+            </a>
           </li>
         </ul>
       </nav>
     </header>
+    <div class="nav-overlay"></div>
 
     <main>
+      <!-- Hero -->
       <section class="hero">
         <h1>Welcome 🙂‍↕️ my name is Ellis 👋🏾</h1>
-        <p>
-          Passionate about securing that bag, maybe some engineering on the side
-          😼
-        </p>
+        <p>Love to learn, maybe some engineering on the side 😼</p>
       </section>
 
+      <!-- About -->
       <section id="about" class="about">
         <h2>About Me</h2>
         <p>
@@ -54,28 +61,41 @@
           rants and engineering related topics (btw this is a plug for my Medium
           page).
         </p>
-        <!--
-        Incompleted section for technical skills, will use font icons to
-        show the different technologies
+
         <h3>Technical Skills 🤓</h3>
-        <p>Placeholder for witty line about my technical skills</p>
-        <ul class="skills-list">
-          <li>JavaScript</li>
-          <li>Python</li>
-        </ul>
-        -->
+
+        <h4>Languages</h4>
+        <div class="skill-icons">
+          <img src="assets/skills/python.svg" alt="Python" />
+          <img src="assets/skills/java.svg" alt="Java" />
+          <img src="assets/skills/js.svg" alt="JavaScript" />
+          <img src="assets/skills/css.svg" alt="CSS" />
+          <img src="assets/skills/html.svg" alt="HTML" />
+        </div>
+
+        <h4>Tools</h4>
+        <div class="skill-icons">
+          <img src="assets/skills/git.svg" alt="Git" />
+          <img src="assets/skills/react.svg" alt="React.js" />
+          <img src="assets/skills/node.svg" alt="Node.js" />
+          <img src="assets/skills/aws.svg" alt="AWS" />
+          <img src="assets/skills/jira.svg" alt="Jira" />
+        </div>
       </section>
 
+      <!-- Experience -->
       <section id="experience" class="experience">
         <h2>Technical Experience</h2>
         <div id="experience-cards" class="experience-container"></div>
       </section>
 
+      <!-- Projects -->
       <section id="projects" class="projects">
         <h2>Projects</h2>
         <div id="project-cards" class="card-container"></div>
       </section>
 
+      <!-- Social -->
       <section id="social" class="social">
         <h2>Socials</h2>
         <p>
@@ -89,51 +109,49 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/github.svg" alt="GitHub" />
+            <img src="assets/brands/github.svg" alt="GitHub" />
           </a>
           <a
             href="https://www.linkedin.com/in/ellis-alcantara/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/linkedin.svg" alt="LinkedIn" />
+            <img src="assets/brands/linkedin.svg" alt="LinkedIn" />
           </a>
           <a
             href="https://www.instagram.com/rs.ellis/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/instagram.svg" alt="Instagram" />
+            <img src="assets/brands/instagram.svg" alt="Instagram" />
           </a>
-
           <a
             href="https://www.youtube.com/@aur-s"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/youtube.svg" alt="YouTube" />
+            <img src="assets/brands/youtube.svg" alt="YouTube" />
           </a>
           <a
             href="https://twitter.com/ellis_alc"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/twitter.svg" alt="Twitter" />
+            <img src="assets/brands/twitter.svg" alt="Twitter" />
           </a>
           <a
             href="https://medium.com/@ellisalcantara"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/medium.svg" alt="Medium" />
+            <img src="assets/brands/medium.svg" alt="Medium" />
           </a>
         </div>
       </section>
+
+      <!-- Footer -->
       <footer class="site-footer">
-        <p>
-          Mood rn: 😼. Make sure to follow me on IG and Twitter though. Last
-          updated 7/1/2025
-        </p>
+        <p>Mood rn: 😼. Make sure to follow me on IG and Twitter though.</p>
       </footer>
     </main>
 
