@@ -91,11 +91,11 @@ const projects = [
     technologies: "React.js, Express, Socket.IO, Firebase",
   },
   {
-    name: "LeetCode Extension",
+    name: "Blog Website",
     image: "assets/brands/github.svg",
-    link: "https://github.com/EIIis/leetcode-extension",
+    link: "https://blog-liart-psi-39.vercel.app/",
     description:
-      "Developed a Chrome extension that detects accepted LeetCode submissions and extracts metadata using content scripts and DOM parsing",
+      "Developed a fast, SEO-friendly blog using modern web tools such as Next.js and React. Deployed via Vercel with CI from GitHub.",
     technologies: "JavaScript, HTML, CSS, Chrome Extension API",
   },
   {
