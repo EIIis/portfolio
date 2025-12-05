@@ -96,7 +96,7 @@ const projects = [
     link: "https://blog-liart-psi-39.vercel.app/",
     description:
       "Developed a fast, SEO-friendly blog using modern web tools such as Next.js and React. Deployed via Vercel with CI from GitHub.",
-    technologies: "JavaScript, HTML, CSS, Chrome Extension API",
+    technologies: "JavaScript, CSS, Next.js, Node.js, React, Vercel",
   },
   {
     name: "ootd",
