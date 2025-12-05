@@ -15,11 +15,6 @@ pnpm-debug.log*
 .eslintcache
 .cache/
 
-# Build output
-dist/
-build/
-out/
-
 # Tests
 coverage/
 
