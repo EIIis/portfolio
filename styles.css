@@ -271,7 +271,9 @@ main section {
 .social-icons a img {
   width: 40px;
   height: 40px;
-  transition: transform 0.3s ease, filter 0.3s;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s;
 }
 
 .social-icons a img:hover {
@@ -366,7 +368,9 @@ footer {
     padding: 0.75rem 0;
     font-size: 1.1rem;
     border-bottom: 1px solid #333;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      border-color 0.3s ease;
   }
 
   .nav-menu a:hover {
@@ -382,7 +386,9 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
     z-index: 999;
   }
 
