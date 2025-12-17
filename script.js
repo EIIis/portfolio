@@ -142,6 +142,32 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   renderExperiences();
 
+  // ----- Theme Toggle Logic -----
+
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = document.querySelector('.theme-icon');
+  const body = document.body;
+
+  // Check for saved theme preference or default to dark mode
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+    themeIcon.textContent = '🌙';
+  }
+
+  function toggleTheme() {
+    body.classList.toggle('light-mode');
+    const isLightMode = body.classList.contains('light-mode');
+
+    // Update icon
+    themeIcon.textContent = isLightMode ? '🌙' : '☀️';
+
+    // Save preference to localStorage
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+
   // ----- Hamburger Menu Logic -----
 
   const hamburger = document.querySelector('.hamburger');
